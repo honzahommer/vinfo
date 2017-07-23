@@ -25,9 +25,9 @@ Usage
 ### ES5
 
     var vinfo = require('vinfo').default;
-    console.log(vinfo(11111111111111111);
+    console.log(vinfo(11111111111111111));
 
 ### ES2015+
 
     import vinfo from 'vinfo';
-    console.log(vinfo(11111111111111111);
+    console.log(vinfo(11111111111111111));
