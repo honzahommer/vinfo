@@ -27,7 +27,9 @@
     "vds",
     "vis"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "validator": "github:honzahommer/validator.js"
+  },
   "devDependencies": {
     "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
