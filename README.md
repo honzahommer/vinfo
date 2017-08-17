@@ -31,3 +31,11 @@ Usage
 
     import vinfo from 'vinfo';
     console.log(vinfo(11111111111111111));
+
+API
+---
+
+Simple API hosted by Heroku.
+
+* http://vinfo.herokuapp.com/11111111111111111
+* http://vinfo.herokuapp.com/11111111111111111/year
