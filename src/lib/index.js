@@ -28,7 +28,7 @@ class VINFO {
     const max = this.vin.substring(0, 4);
     const min = max.substring(0, max.substring(2, 3) === 9 ? 2 : 3);
 
-    return valByKeyStr(MAKES, min) || valByKeyStr(MAKES, max);
+    return valByKeyStr(MAKES, min) || valByKeyStr(MAKES, max) || undefined;
   }
 
   year() {
