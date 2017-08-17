@@ -1,7 +1,6 @@
 {
-  "name": "vinfo",
-  "version": "0.1.1",
-  "description": "Validate and decode VIN number.",
+  "name": "vinfo-api",
+  "description": "Simple VIN decode service API.",
   "license": "ISC",
   "repository": "honzahommer/vinfo",
   "author": "Honza Hommer <honza@hommer.cz> (https://hommer.cz)",
@@ -9,52 +8,23 @@
     "node": ">=4.0"
   },
   "scripts": {
-    "transpile": "rimraf dist && babel src -d dist",
-    "prepublish": "npm run transpile",
-    "doc": "rimraf esdoc && esdoc -c esdoc.json",
-    "lint": "eslint .",
-    "mocha": "mocha specs --recursive --compilers js:babel-register",
-    "start": "export NODE_ENV=development; npm run mocha -- --watch --growl",
-    "test": "export NODE_ENV=test; npm run lint && rimraf coverage && nyc npm run mocha"
+    "start": "node ./bin/www",
+    "test": "mocha --timeout 10000"
   },
-  "files": [
-    "dist"
-  ],
-  "main": "dist/lib/index.js",
-  "keywords": [
-    "vin",
-    "wmi",
-    "vds",
-    "vis"
-  ],
   "dependencies": {
-    "validator": "github:honzahommer/validator.js"
+    "body-parser": "~1.17.1",
+    "common-errors": "^1.0.4",
+    "cookie-parser": "~1.4.3",
+    "debug": "^3.0.0",
+    "express": "~4.15.2",
+    "helmet": "^3.8.1",
+    "morgan": "~1.8.1",
+    "request-favicon": "^1.0.0",
+    "vinfo": "^0.1.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-core": "^6.17.0",
-    "babel-plugin-istanbul": "^2.0.3",
-    "babel-preset-latest": "^6.16.0",
-    "babel-register": "^6.16.3",
-    "chai": "^3.5.0",
-    "codeclimate-test-reporter": "^0.4.0",
-    "codecov": "^1.0.1",
-    "esdoc": "^0.4.8",
-    "eslint": "^3.8.0",
-    "eslint-config-airbnb-base": "^10.0.1",
-    "eslint-plugin-import": "^2.0.1",
-    "mocha": "^3.1.2",
-    "nyc": "^8.3.1",
-    "rimraf": "^2.5.4",
-    "sinon": "^1.17.6"
-  },
-  "nyc": {
-    "sourceMap": false,
-    "instrument": false,
-    "reporter": [
-      "lcovonly",
-      "html",
-      "text"
-    ]
+    "chai": "^4.1.1",
+    "chai-http": "^3.0.0",
+    "mocha": "^3.5.0"
   }
 }
